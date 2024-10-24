@@ -37,6 +37,21 @@
         </div>
     </div>
 
+    <script>
+        var load = 0;
+       
+        document.getElementById('gform').onload = function(){
+
+            load++;
+            if (load > 1) {
+                // Scroll to the top of the iframe when the form changes to a new page
+                window.scrollTo({
+                    top: document.getElementById('gform').offsetTop - 50,  // Scrolls slightly above the iframe
+                    behavior: 'smooth'  // Smooth scrolling
+                });
+            }
+        } 
     
+    </script>
 </body>
 </html>
